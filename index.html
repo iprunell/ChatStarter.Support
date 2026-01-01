@@ -5,43 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Support - ChatStarter</title>
+    <meta name="description" content="Support page for ChatStarter: FAQs, contact, and help resources.">
     <style>
+        :root {
+            --bg: #f9f9f9;
+            --text: #333;
+            --link: #007acc;
+            --card: #fff;
+            --shadow: rgba(0,0,0,0.08);
+        }
+        * { box-sizing: border-box; }
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f9f9f9;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            padding: 24px 0;
+            background: #fff;
+            box-shadow: 0 1px 6px var(--shadow);
+            margin-bottom: 32px;
+        }
+        .wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         h1 {
-            color: #333;
+            margin: 0;
+            font-size: 1.8rem;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: var(--card);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px var(--shadow);
         }
+        h2 { margin-top: 24px; }
         a {
-            color: #007acc;
+            color: var(--link);
             text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+        ul { padding-left: 20px; }
+        footer {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin: 28px 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>ChatStarter Support</h1>
-        <p>Welcome to the support page for ChatStarter! Here you’ll find resources and FAQs.</p>
-        
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:Ian.Prunell.Dev@gmail.com</a></p>
-        
-        <h2>FAQs</h2>
-        <ul>
-            <li><strong>How do I understand how to play the games?</strong> Use the (i)nfo link at the top right of the associated page.</li>
-            <li><strong>How do I report a bug?</strong> Email us or open an issue on GitHub.</li>
-        </ul>
-    </div>
+    <header>
+        <div class="wrap">
+            <h1>ChatStarter Support</h1>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <div class="container">
+            <p>Welcome to the support page for ChatStarter! Here you’ll find resources and FAQs.</p>
+
+            <h2>Contact Us</h2>
+            <p>Email: mailto:Ian.Prunell.Dev@gmail.comIan.Prunell.Dev@gmail.com</a></p>
+
+            <h2>FAQs</h2>
+            <ul>
+                <li><strong>How do I understand how to play the games?</strong> Use the <em>(i)</em> info link at the top right of the associated page.</li>
+                <li><strong>How do I report a bug?</strong> Email us or open an issue on GitHub.</li>
+            </ul>
+
+            <h2>Helpful Links</h2>
+            <ul>
+                <li><a href="https://github.comrname/your-repo/issuesReport an issue on GitHub</a></li>
+                <li><a href="privacyacy Policy</a> (optional: create a separate page)</li>
+                <li><a href="lTerms of Use</a> (optional)</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> ChatStarter. All rights reserved.
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
-
